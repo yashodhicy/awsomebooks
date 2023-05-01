@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  section {
+    width: 90%;
+  }
+  
+  #bookForm {
+    width: 60%;
+    padding: 0.3rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  #add-btn {
+    width: 20%;
+    margin-left: auto;
+  }
+  
+  #bookOfList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:20rem;
+    overflow-y: scroll;
+    margin: 0 auto;
+    border: 2px solid rgb(2, 2, 2);
+  }
+  
+  #bookOfList div {
+    margin: 0.3rem;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #bookOfList div:nth-child(2n + 1) {
+    background-color: rgb(188, 184, 219);
+  }
+  
+  #bookOfList p {
+    display: inline-block;
+    padding: 0.3rem 0;
+    margin: 0.3rem;
+  }
+  
+  #bookOfList button {
+    margin-left: auto;
+    background-color: #f31e37;
+    color: white;
+    border: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  
+  /* nav bar */
+  
+  nav {
+    display: flex;
+    position: fixed;
+    top: 0.3rem;
+    border: 2px solid black;
+    background-color: white;
+    width: 90%;
+    height: 3rem;
+    justify-content: space-between;
+    z-index: 99;
+  }
+  
+  nav h1 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 70%;
+    margin: 0 0.3rem;
+  }
+  
+  #navlinks {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  #navlinks li {
+    margin-right: 1rem;
+  }
+  
+  #date {
+    display: flex;
+    width: 90%;
+    position: relative;
+    justify-content: flex-end;
+    top: 3rem;
+    margin-top: 0.8rem;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    border: 2px solid black;
+    padding-left: 1rem;
+  }
+  
+  .main {
+    height: 80vh;
+  }
+  
+  #navlinks li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  #contact {
+    margin: auto;
+    padding-top: 5rem;
+    width: 80%;
+    text-align: center;
+  }
+  
+  #contact ul {
+    padding-top: 2rem;
+    padding-left: 30%;
+    text-align: left;
+  }
+  
