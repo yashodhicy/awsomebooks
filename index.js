@@ -1,6 +1,7 @@
 import Book from './modules/book.js'
 import { Navigation } from './modules/navigation.js';
-import { DateTime } from './node_modules/luxon';
+import { dom } from './modules/Domelements.js';
+import { updateCurrentDate } from './modules/date.js';
 
 document.addEventListener('DOMContentLoaded', () => Book.displayBooks());
 
@@ -20,15 +21,9 @@ document.querySelector('#bookOfList').addEventListener('click', (e) => {
     Book.removeBook(e.target.previousElementSibling.textContent);
 });
 
-// Get current date and display it in the footer
-const options = {
-    year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
-};
-const now = DateTime.now();
-const currentTime = now.toLocaleString('en-US', options);
-document.getElementById('date').innerHTML = currentTime;
-
+updateCurrentDate();
 //  navigation
 
-Navigation();
+const domElements = dom();
+Navigation(domElements);
 

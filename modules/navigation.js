@@ -1,16 +1,8 @@
-export function Navigation() {
-    const bookListSection = document.getElementById('booklist');
-    const addNewBookSection = document.getElementById('addnewbook');
-    const contactSection = document.getElementById('contact');
+import { dom } from './Domelements.js';
+export function Navigation(domElements) {
+    
+    const { sections, links, defaultLink, defaultSection } = domElements;
 
-    const sections = document.querySelectorAll('section');
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    // Set the default link and section
-    const defaultLink = document.querySelector('#booklist-link');
-    const defaultSection = document.querySelector('#booklist');
-
-    // Remove the hide class from the default section
     defaultSection.classList.remove('hide');
 
     // Trigger the click event on the default link
