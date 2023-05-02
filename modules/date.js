@@ -1,9 +1,10 @@
 import { DateTime } from './luxon.js';
 
-export function updateCurrentDate() {
+function updateCurrentDate() {
   const dateElement = document.querySelector('#date');
 
   function setCurrentDate() {
+    // eslint-disable-next-line no-undef
     const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
     dateElement.innerHTML = currentDate;
   }
@@ -11,3 +12,4 @@ export function updateCurrentDate() {
   setCurrentDate();
   setInterval(setCurrentDate, 1000);
 }
+export default updateCurrentDate;
